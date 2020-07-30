@@ -12,7 +12,8 @@ class Blockchain:
         self.create_block(0, '00')
 
     def create_block(self, nonce, previous_hash):
-        """ Adding a block of transactions to the block chain"""
+        """ Adding a block of transactions to the block chain
+        We need a nonce to create a transaction """
         block = {"block number" : len(self.chain) + 1,
                  "timestamp" : time(),
                  "transactions" : self.transactions,

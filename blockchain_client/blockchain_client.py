@@ -13,7 +13,7 @@ class Transaction:
 app = Flask(__name__)
 
 @app.route('/')
-def index()
+def index():
     return render_template('index.html')
 
 @app.route('/make_transaction')
@@ -34,7 +34,7 @@ if __name__ == '__main__':
     from argparse import ArgumentParser
 
     parser = ArgumentParser()
-    parser.add_argument('-p', '--port', default=5008, type=int, help="port to list to")
+    parser.add_argument('-p', '--port', default=8081, type=int, help="port to list to")
     args = parser.parse_args()
     port = args.port
 
